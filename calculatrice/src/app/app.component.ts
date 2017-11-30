@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  private $saisie: string = " ";
+
+
+  saisie( value: string ) {
+    this.$saisie = this.$saisie + value;
+
+  }
+
+  reset() {
+    this.$saisie = " ";
+  }
+
+
+  egale() {
+    this.$saisie = eval(this.$saisie);
+
+  }
+
 }
